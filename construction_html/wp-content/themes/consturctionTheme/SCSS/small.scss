@@ -1,0 +1,817 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/*  Header  */
+header {
+  font-weight: $boldWeight;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  background-color: $primary-color;
+	  	a#phone {
+    position: absolute;
+    right: 24px;
+    color: black; 
+	z-index:1000
+  }
+  h3 {
+    display: none;
+  }
+
+  div.head {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-left: 3px;
+    padding-top: 3px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    bottom: 60px;
+    left: 120px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 120px;
+  }
+
+
+
+  img {
+    max-width: 100px;
+  }
+}
+
+/*  Navigation  */
+/* NAVIGATION  */
+nav {
+  background-color: $secondary-color;
+  top: 0;
+  max-width: 1200px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+  nav .nolink {
+    pointer-events: none;
+    cursor: default; }
+  nav ul li a {
+    display: block;
+    color: #efe7dd;
+    text-decoration: none;
+    padding: .6rem 2%;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3); }
+  nav .active {
+    background-color: #178497; }
+nav .parent {
+  background-color: #212121; }
+  nav .current-menu-item {
+    background-color: #178497; }
+  nav .current_page_parent {
+    background-color: #178497; }
+  nav ul li ul li a {
+    padding-left: 9%; }
+  nav h4 {
+    background-color: white;
+    margin-top: .4rem;
+    border-radius: 0; }
+  nav div.search {
+    position: absolute;
+    top: 8px;
+    right: 2%; }
+  nav input.searchField {
+    font-size: 1rem;
+    position: absolute;
+    right: 25px;
+    height: 32px;
+    padding-top: .5rem;
+    margin-right: .05rem;
+    border: 1px solid #b6b6b6;
+    font-size: 120%;
+    margin: .4rem;
+    width: 30%;
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+  nav input.sbtn {
+    background-image: url(../images/searchIcon.png);
+    background-size: 80%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 0;
+    border: none;
+    margin-right: 2%;
+    width: 32px;
+    height: 32px;
+    padding-top: .5rem;
+    border: 1px solid #b6b6b6;
+    margin: .4rem .4rem .4rem 0;
+    background-color: #DFCEBA; }
+
+	.searchy {
+		display: none;
+	}
+  nav h4 a {
+    font-size: .2em;
+    width: .2em;
+    text-align: center;
+    text-decoration: none;
+    color: #178497; }
+  nav h4 a:hover {
+    opacity: 0.7; }
+  nav ul.closed {
+    display: none; }
+  nav #hamburgerBtn {
+    width: 105px;
+    height: 32px;
+    background-image: url(../images/menuIconWhite.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-size: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 6px 0 6px 2%; }
+  nav #menu-main-menu {
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 900;
+    font-weight: normal; }
+  nav #menu-main-menu.open {
+    height: auto; }
+	button {
+		font-size: 1.5rem;
+		color: white;
+		background-color: rgba(0,0,0,0.2);
+		border: solid 1px rgba(168, 168, 168, 0.3);
+		width: 4rem;
+		border-radius: 5px;
+	}
+article {margin: .5rem;}
+	article.llgallery figure {
+		max-width: 100%;
+		height: 200px;
+		padding-bottom: 20%;
+	}
+	article.llgallery figure img {max-width: 100%;}
+//
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+//nav {
+//  max-width: 1200px;
+//  width: 100%;
+//  @include gradient($secondary-color, darken($secondary-color, 20%));
+//
+//  div {
+//    overflow: hidden;
+//    max-width: 1200px;
+//    margin: 0 auto;
+//
+//    a {
+//      float: left;
+//      display: block;
+//      color: white;
+//      text-align: center;
+//      padding: 14px 16px;
+//      text-decoration: none;
+//      font-size: 15px;
+//      font-weight: $boldWeight;
+//    }
+//
+//    a:hover {
+//      background-color: $primary-color;
+//      color: $secondary-color;
+//    }
+//
+//    a:last-child {
+//      border-right: none;
+//    }
+//  }
+//
+//  ul {
+//    float: left;
+//    width: 100%;
+//  }
+//
+//  * {
+//    -moz-box-sizing: border-box;
+//    -webkit-box-sizing: border-box;
+//    box-sizing: border-box;
+//  }
+//
+//  #hamburgerBtn {
+//    display: none;
+//  } /* hide the navigation button for all screen widths. We will show it below just for small screens */
+//
+//  //these two variables control the background color and text color
+//  $menuColor: #94b0b2;
+//  $menuTextColor: rgba(255, 255, 255, 0.9);
+//
+//  // limit the code below to the max width show in the media query below. This width should match the breakpoint where your suckerfish horizontal menu is to take over.
+//  @media only screen and (max-width: 60rem) {
+//    /* Pushes the body tag down to make room for the navigation bar at the top of the page */
+//    body {
+//      padding-top: 2.75rem;
+//    }
+//
+//    // places the navigation bar at the top of the page
+//    nav {
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      width: 100%;
+//      height: 2.75rem;
+//      background-color: $menuColor;
+//    }
+//
+//    //Styles the clickable hamburger button
+//    #hamburgerBtn {
+//      display: block;
+//      width: 7rem;
+//      height: 2.75rem;
+//      background: none;
+//      color: $menuTextColor;
+//      border: 0 none;
+//      font-size: 1.3rem;
+//      font-weight: normal;
+//      text-align: left;
+//      //used to enlarge an entity to match any words that may also be used, like OPEN
+//      i {
+//        font-size: 2rem;
+//        font-style: normal;
+//      }
+//    }
+//
+//    // These lines show and hide the two alternate icons for the open and close hamburger
+//    #hamburgerBtn.open span:nth-child(1) {
+//      display: none;
+//    }
+//    #hamburgerBtn.open span:nth-child(2) {
+//      display: block;
+//    }
+//    #hamburgerBtn span:nth-child(1) {
+//      display: block;
+//    }
+//    #hamburgerBtn span:nth-child(2) {
+//      display: none;
+//    }
+//
+//    // unordered list Navigation Bar --------------------------------------------------------
+//    #primaryNav {
+//      height: 0; //hides the nav links
+//      overflow: hidden;
+//      width: 20rem;
+//      background-color: $menuColor;
+//      margin: 0;
+//      padding: 0;
+//      z-index: 998; // places the links above the page content
+//      font-family: Verdana;
+//      font-weight: normal;
+//    }
+//
+//    // if the site has a class of active added to any list itme then it is darkened for "Wayfinding"
+//    #primaryNav li.current-menu-item a {
+//      background-color: rgba(0, 0, 0, 0.25);
+//    }
+//
+//    // style the anchors
+//    #primaryNav li a {
+//      display: block; // shows the nav links
+//      width: 100%;
+//      padding: 0.75rem 2vw;
+//      font-size: 14px;
+//      text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+//      color: $menuTextColor;
+//      text-decoration: none;
+//      border-top: 1px solid rgba(0, 0, 0, 0.2);
+//    }
+//
+//    // when hovering over any menu item or sub menu item darken by 5%
+//    #primaryNav li a:hover {
+//      background-color: rgba(0, 0, 0, 0.5);
+//    }
+//
+//    // Toggle the navigation bar to expand down when the javascript assigns the "open" class
+//    #primaryNav.open {
+//      height: auto;
+//    }
+//
+//    // .parent class indicates dropdown by adding a down arrow to the parent list item
+//    #primaryNav li.parent > a::after {
+//      font-size: 0.75rem;
+//      content: "\25BC";
+//      color: rgba(255, 255, 255, 0.5);
+//      float: right;
+//    }
+//
+//    //hide the sub menu unordered list by default
+//    #primaryNav li ul {
+//      display: none;
+//      background: rgba(0, 0, 0, 0.3);
+//      padding: 0;
+//      margin: 0;
+//    }
+//
+//    // styles the sub menu anchors just a bit
+//    #primaryNav li ul a {
+//      padding-left: 20px;
+//    }
+//
+//    display the sub menu unordered list on touch or hover
+//    #primaryNav li:hover {
+//      display: block;
+//    }
+//
+//    // style the sub menu items
+//  } /* End Mobile Styles */
+
+
+  .search-container {
+    float: right;
+    display: block;
+    border: 1px;
+  }
+
+  .search-container input {
+    width: 80%;
+    padding: 5px;
+  }
+
+  .search-container button {
+    width: 10%;
+    padding: 5px;
+  }
+
+  .fa-bars {
+    padding: 10px;
+    float: left;
+  }
+
+
+form {
+  margin: 1rem $gutter;
+  width: 95%;
+  fieldset {
+    border: 1px solid lighten($primary-color, 20%);
+    border-radius: 0.4rem;
+    padding: 0 $gutter;
+    margin: 2rem 0;
+    legend {
+      text-align: left;
+      color: $primary-color;
+      padding: 0 0.8rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  label.top {
+    display: block;
+    padding: 0.75rem 0;
+    span {
+      font-size: 0.75rem;
+      color: $secondary-color;
+    } //end span
+
+    input,
+    textarea {
+      display: block;
+      font-size: 1rem;
+      padding: 0.75rem;
+      background-color: #f6f6f6;
+      border: 1px solid #bbb;
+      color: $secondary-color;
+      margin-top: 0.2rem;
+      width: 100%;
+    } //end iput
+
+    textarea {
+      min-height: 13rem;
+    }
+    input:required {
+      border: 2px solid $secondary-color;
+    }
+    input:required:valid {
+      border-color: green;
+    }
+  } //end label
+
+  label.sbs {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  label.radio {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    select {
+      background-color: #f6f6f6;
+      padding: 0.75rem;
+      text-align: left;
+      border: 1px solid #bbb;
+      color: $secondary-color;
+      margin-top: 0.2rem;
+      width: 100%;
+    }
+  }
+
+  input.submitBtn {
+    border: none;
+    background-color: #00afa4;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: $normalWeight;
+    padding: 0.4rem 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 2rem $gutter;
+    float: left;
+  }
+} //end form
+
+/*  main  */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2%;
+
+  h2 {
+    font-size: 1.4rem;
+    color: $secondary-color;
+  }
+
+  div.mySlider div {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  div.teaser {
+    padding: 15px;
+    width: 50%;
+    float: left;
+    position: relative;
+    span {
+      color: #fff;
+      position: absolute;
+      display: block;
+      text-align: center;
+      bottom: 45px;
+      width: 82%;
+      padding: 0.3rem 2%;
+      font-size: 1.5rem;
+    }
+    img {
+      display: block;
+      width: 100%;
+      /* For IE8 and earlier */
+    }
+	  
+	  
+//
+//   img:hover {
+//     opacity: 1;
+//      filter: alpha(opacity=100);
+//    }
+
+
+    p {
+      height: 25px;
+      width: 100%;
+      background-color: $primary-color;
+      color: white;
+      padding-top: 5px;
+      padding-left: 10px;
+    }
+
+
+  }
+	.gallary div img {width: 100%;}
+
+.galleryflex{
+	display: flex;
+	flex-wrap: wrap;
+	figure{
+		flex-basis: 50%;
+		padding: .5rem 2%;
+	}
+	img{width: 100%;}
+}
+}
+
+
+
+.row{clear:both}
+.column {padding: 0 $gutter;}
+
+.submitBtn {
+  width: 80%;
+  height: 50px;
+  border-radius: 25px;
+}
+
+
+
+@for $i from 1 through 12 {
+	$w:($i/12)*100%;
+		.small-#{$i} {width: $w; float:left;}
+}
+
+  .cruiseContainer {
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    .info-container {
+      float: right;
+      width: 100%;
+
+      button {
+        float: left;
+        background-color: $secondary-color;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        color: white;
+      }
+    }
+  }
+
+  .agentInfo {
+    img {
+      width: 100%;
+      float: right;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  .bookCruise {
+    input {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px;
+      padding: 10px;
+    }
+
+    input.required {
+      border-left: 5px solid red;
+    }
+
+    select {
+      margin-bottom: 30px;
+      padding: 10px;
+    }
+
+    #submit {
+      max-width: 80px;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    /* For IE8 and earlier */
+  }
+
+  
+
+  div.lead {
+    width: 100%;
+    height: 442px;
+  }
+
+  div.thumbnails {
+    padding: 5px;
+    width: 50%;
+    float: left;
+    position: relative;
+
+    span {
+      color: $primary-color;
+      position: absolute;
+      display: block;
+      text-align: center;
+      bottom: 30px;
+      width: 100%;
+      padding: 0.3rem 2%;
+      font-size: 1.5rem;
+    }
+
+    p {
+      height: 25px;
+      width: 100%;
+      background-color: $primary-color;
+      color: white;
+      padding-top: 5px;
+      padding-left: 10px;
+    }
+  }
+
+	
+
+#contactFoot p {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  clear: both;
+}
+
+#contactFoot h2 {
+  margin-top: 10px;
+}
+
+#contact {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+
+#social {
+  clear: both;
+  width: 100%;
+  padding-top: 25px;
+
+  div.socialMedia {
+    float: left;
+    display: block;
+    width: 20%;
+    text-align: center;
+
+    i {
+      font-size: 40px;
+    }
+
+    i:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+#newsLetter {
+  width: 100%;
+  float: left;
+}
+
+#why {
+  width: 100%;
+  float: left;
+}
+
+/*  Footer  */
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  p {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+.active {
+  background-color: darken($secondary-color, 10%);
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+
+.subscription {
+  width: 80%;
+  height: 50px;
+  border-radius: 1px;
+  margin-bottom: 10px;
+}
+
+
+
+.row{
+	clear: both;
+}
+
+.column{
+	padding: 0 $gutter;
+}
+
+
+
+
+
+a.read-more{
+	display: block;
+	background-color: lighten($secondary-color, 20%);
+	color: white;
+	padding: .3rem 0;
+	text-align: center;
+	font-size: .75rem;
+	width: 8rem;
+	border-radius: 20px;
+	float: right;
+	text-decoration: none;}
+
+.about{
+	  column-count: 1;
+	  column-rule: 4px double #000000;
+
+
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+section.theGallary figure {
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.6%; /* You define this doing image height / width * 100% */
+    position: relative;
+	margin: 0;
+}
+section.theGallary figure img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+div.wpcf7 {
+	margin: 0 $gutter;
+	.wpcf7-text, .wpcf7-select, .wpcf7-textarea {
+		font-size: 1rem;
+		color: $primary-color;
+		padding: .65rem .5rem;
+		margin: 0;
+		border-radius: 4px;
+		border: 1px solid #999;
+		width: 100%;
+
+	}
+	
+	.wpcf7-submit{
+		float: left;
+        background-color: $secondary-color;
+        padding: 10px;
+        border-radius: 10px;
+		color: white;
+		width: 10rem;
+	}
+}

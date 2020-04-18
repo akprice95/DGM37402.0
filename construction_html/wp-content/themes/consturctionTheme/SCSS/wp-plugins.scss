@@ -1,0 +1,74 @@
+/* Scss Document */
+
+div.news-content{
+	padding: .5rem $gutter 0 $gutter;
+}
+
+.date-post{
+	background-color: $secondary-color;
+	float: left;
+	
+
+	h2 {
+	 align-content: center;
+		 color: white;
+	}
+
+	p{
+	 color: white
+	}
+}
+
+.post-content-text {
+	margin-left: 6rem;
+}
+h3.news-title {
+	font-size: 2.4rem;
+}
+.news-content-excerpt {
+	color: black;
+	
+	a.news-more-link{
+        border-radius: 5px;
+		color: white;
+		width: 3rem;
+		
+		background-color: $accent-color;
+	}
+	div.news-short-content {
+		font-size: 2.4rem;
+	}
+}
+
+div.news_pagination {
+	text-align: center;
+	
+	.page-numbers {background-color: $accent-color;
+        background-color: $accent-color;
+        padding: 10px;
+        border-radius: 10px;
+		color: white;
+		width: 10rem;
+	}
+	
+	a { color: white;}
+	
+	a:hover {background-color: $primary-color;}
+	
+	.current { background-color: $secondary-color;}
+	
+	
+}
+
+figure.newsphoto {
+		width:100;
+	img {width:100;}
+	}
+
+@media only screen and (min-width: 35em) {
+	figure.newsphoto {
+		width: 50%;
+		float: right;
+		margin-left: $gutter;
+	}
+}
